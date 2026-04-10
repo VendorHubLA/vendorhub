@@ -59,16 +59,21 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="max-w-7xl mx-auto px-6 pt-20 pb-24 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-[#C4A35A]/30 bg-[#C4A35A]/10 px-4 py-1.5 mb-8">
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#C4A35A]/30 bg-[#C4A35A]/10 px-4 py-1.5 mb-10">
           <Sparkles className="h-3.5 w-3.5 text-[#C4A35A]" />
           <span className="text-xs font-medium text-[#A8893E]">AI-Native Vendor Management</span>
         </div>
 
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#1E3829] leading-tight mb-6 max-w-4xl mx-auto">
-          Where Vendors,<br />
-          <span className="text-[#C4A35A]">Communication,</span><br />
-          and Projects Align
-        </h1>
+        <div className="flex justify-center mb-10">
+          <Image
+            src="/logo-full.png"
+            alt="VendorHub — Where Vendors, Communication, and Projects Align"
+            width={680}
+            height={246}
+            className="w-full max-w-xl md:max-w-2xl h-auto"
+            priority
+          />
+        </div>
 
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
           VendorHub is the operating system for commercial real estate teams — connecting vetted vendors,
