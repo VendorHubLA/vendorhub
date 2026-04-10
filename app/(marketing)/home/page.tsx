@@ -16,33 +16,23 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#F5F0E8]">
       {/* Nav */}
       <nav className="relative flex items-center justify-between px-6 py-3 max-w-7xl mx-auto">
-        {/* Left: nav links */}
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#features" className="text-sm text-gray-600 hover:text-[#1E3829] transition-colors">Features</a>
-          <a href="#how-it-works" className="text-sm text-gray-600 hover:text-[#1E3829] transition-colors">How It Works</a>
-          <a href="#pricing" className="text-sm text-gray-600 hover:text-[#1E3829] transition-colors">Pricing</a>
-        </div>
-        {/* Mobile: small wordmark on left */}
-        <div className="flex md:hidden items-center gap-2">
-          <div className="h-7 w-7 rounded bg-[#1E3829] flex items-center justify-center">
-            <Zap className="h-3.5 w-3.5 text-[#C4A35A]" />
-          </div>
-          <span className="font-bold text-base">
-            <span className="text-[#1E3829]">VENDOR</span>
-            <span className="text-[#C4A35A]">HUB</span>
-          </span>
-        </div>
-
-        {/* Center: real logo — absolute so it sits exactly in the middle */}
-        <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
+        {/* Left: logo */}
+        <div className="flex items-center">
           <Image
             src="/logo-full.png"
             alt="VendorHub"
-            width={220}
-            height={80}
-            className="h-14 w-auto"
+            width={160}
+            height={58}
+            className="h-10 w-auto"
             priority
           />
+        </div>
+
+        {/* Center: nav links */}
+        <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
+          <a href="#features" className="text-sm text-gray-600 hover:text-[#1E3829] transition-colors">Features</a>
+          <a href="#how-it-works" className="text-sm text-gray-600 hover:text-[#1E3829] transition-colors">How It Works</a>
+          <a href="#pricing" className="text-sm text-gray-600 hover:text-[#1E3829] transition-colors">Pricing</a>
         </div>
 
         {/* Right: CTA */}
@@ -59,12 +49,7 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="max-w-7xl mx-auto px-6 pt-20 pb-24 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-[#C4A35A]/30 bg-[#C4A35A]/10 px-4 py-1.5 mb-10">
-          <Sparkles className="h-3.5 w-3.5 text-[#C4A35A]" />
-          <span className="text-xs font-medium text-[#A8893E]">AI-Native Vendor Management</span>
-        </div>
-
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-6">
           <Image
             src="/logo-full.png"
             alt="VendorHub — Where Vendors, Communication, and Projects Align"
@@ -73,6 +58,11 @@ export default function HomePage() {
             className="w-full max-w-xl md:max-w-2xl h-auto"
             priority
           />
+        </div>
+
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#C4A35A]/30 bg-[#C4A35A]/10 px-4 py-1.5 mb-10">
+          <Sparkles className="h-3.5 w-3.5 text-[#C4A35A]" />
+          <span className="text-xs font-medium text-[#A8893E]">AI-Native Vendor Management</span>
         </div>
 
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
