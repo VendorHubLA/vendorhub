@@ -104,5 +104,11 @@ NEXT_PUBLIC_APP_URL=
 
 ## Deployment
 
-Repo: `github.com/VendorHubLA/vendorhub`  
-Target: `vercel.com/vendorhubla/vendorhub` — connect GitHub repo in Vercel settings to enable auto-deploy on push.
+**Live:** `https://vendorhub-xi.vercel.app`  
+**Repo:** `github.com/VendorHubLA/vendorhub`  
+**Vercel project:** `vercel.com/vendor-hub/vendorhub`
+
+Deploy manually with:
+```bash
+npx vercel --token <TOKEN> --yes --prod --scope vendor-hub
+```
