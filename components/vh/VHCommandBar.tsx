@@ -91,8 +91,8 @@ export function VHCommandBar() {
         className="flex items-center gap-2 rounded-md border border-[#2E5A40] bg-[#2E5A40]/20 px-3 py-1.5 text-sm text-[#C4A35A] hover:bg-[#2E5A40]/40 transition-colors"
       >
         <Sparkles className="h-3.5 w-3.5" />
-        <span>Copilot</span>
-        <kbd className="rounded border border-[#2E5A40] px-1 py-0.5 text-xs text-[#6B7280]">⌘K</kbd>
+        <span className="hidden sm:inline">Copilot</span>
+        <kbd className="hidden sm:inline rounded border border-[#2E5A40] px-1 py-0.5 text-xs text-[#6B7280]">⌘K</kbd>
       </button>
     )
   }
@@ -106,7 +106,7 @@ export function VHCommandBar() {
       />
 
       {/* Panel */}
-      <div className="relative w-full max-w-2xl rounded-xl border border-[#D6CCBC] bg-white shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-2xl mx-4 rounded-xl border border-[#D6CCBC] bg-white shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="flex items-center gap-3 border-b border-[#D6CCBC] bg-[#1E3829] px-4 py-3">
           <Sparkles className="h-4 w-4 text-[#C4A35A]" />

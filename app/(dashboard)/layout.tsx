@@ -25,7 +25,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
 
       <div className="flex flex-1 flex-col overflow-hidden">
         {/* Top bar */}
-        <header className="flex h-14 items-center justify-between border-b border-[#D6CCBC] bg-white px-6">
+        <header className="flex h-14 items-center justify-between border-b border-[#D6CCBC] bg-white px-6 pl-14 md:pl-6">
           <div />
           <VHCommandBar />
         </header>
