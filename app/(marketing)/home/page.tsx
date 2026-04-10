@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {
-  Zap, FolderKanban, Users, ShieldCheck, BarChart3,
+  FolderKanban, Users, ShieldCheck, BarChart3,
   MessageSquare, Sparkles, ArrowRight, CheckCircle2,
+  Zap,
 } from 'lucide-react'
 
 export const metadata = {
@@ -13,21 +15,37 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#F5F0E8]">
       {/* Nav */}
-      <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
-        <div className="flex items-center gap-2.5">
-          <div className="h-8 w-8 rounded-lg bg-[#1E3829] flex items-center justify-center">
-            <Zap className="h-4 w-4 text-[#C4A35A]" />
-          </div>
-          <span className="font-bold text-xl">
-            <span className="text-[#1E3829]">VENDOR</span>
-            <span className="text-[#C4A35A]">HUB</span>
-          </span>
-        </div>
+      <nav className="relative flex items-center justify-between px-6 py-3 max-w-7xl mx-auto">
+        {/* Left: nav links */}
         <div className="hidden md:flex items-center gap-8">
           <a href="#features" className="text-sm text-gray-600 hover:text-[#1E3829] transition-colors">Features</a>
           <a href="#how-it-works" className="text-sm text-gray-600 hover:text-[#1E3829] transition-colors">How It Works</a>
           <a href="#pricing" className="text-sm text-gray-600 hover:text-[#1E3829] transition-colors">Pricing</a>
         </div>
+        {/* Mobile: small wordmark on left */}
+        <div className="flex md:hidden items-center gap-2">
+          <div className="h-7 w-7 rounded bg-[#1E3829] flex items-center justify-center">
+            <Zap className="h-3.5 w-3.5 text-[#C4A35A]" />
+          </div>
+          <span className="font-bold text-base">
+            <span className="text-[#1E3829]">VENDOR</span>
+            <span className="text-[#C4A35A]">HUB</span>
+          </span>
+        </div>
+
+        {/* Center: real logo — absolute so it sits exactly in the middle */}
+        <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
+          <Image
+            src="/logo-full.png"
+            alt="VendorHub"
+            width={220}
+            height={80}
+            className="h-14 w-auto"
+            priority
+          />
+        </div>
+
+        {/* Right: CTA */}
         <div className="flex items-center gap-3">
           <Link href="/login" className="text-sm font-medium text-[#1E3829] hover:text-[#2E5A40] transition-colors">
             Sign in
@@ -71,11 +89,11 @@ export default function HomePage() {
       </section>
 
       {/* Platform preview strip */}
-      <section className="bg-[#1E3829] py-4 overflow-hidden">
-        <div className="flex items-center gap-8 px-6 text-[#C4A35A] text-sm font-medium animate-none">
+      <section className="bg-[#1E3829] py-4">
+        <div className="flex items-center justify-between max-w-7xl mx-auto px-6 text-[#C4A35A] text-sm font-medium">
           {['Vetted Vendor Registry', 'AI Copilot (⌘K)', 'Real-Time Project Threads', 'Compliance Tracking', 'Milestone Payments', 'Portfolio Analytics', 'RFP Generation'].map((item, i) => (
             <span key={i} className="whitespace-nowrap flex items-center gap-2">
-              <span className="h-1 w-1 rounded-full bg-[#C4A35A]/50" />
+              <span className="h-1 w-1 rounded-full bg-[#C4A35A]/50 shrink-0" />
               {item}
             </span>
           ))}
@@ -203,15 +221,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t border-[#EDE6D8] py-8 px-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="h-6 w-6 rounded bg-[#1E3829] flex items-center justify-center">
-              <Zap className="h-3 w-3 text-[#C4A35A]" />
-            </div>
-            <span className="text-sm font-bold">
-              <span className="text-[#1E3829]">VENDOR</span>
-              <span className="text-[#C4A35A]">HUB</span>
-            </span>
-          </div>
+          <Image src="/logo-full.png" alt="VendorHub" width={120} height={44} className="h-8 w-auto" />
           <p className="text-xs text-gray-400">
             Where Vendors, Communication, and Projects Align
           </p>
